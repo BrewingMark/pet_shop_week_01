@@ -46,3 +46,7 @@ def remove_pet_by_name(pet_shop, name)
   pet_shop[:pets].delete_if { |name| name != :name}
 end
 # Isn't this backwards??? I dont know why this "works" or passes the test.
+
+def add_pet_to_stock(pet_shop, new_pet)
+  pet_shop[:pets].push(new_pet)
+end
