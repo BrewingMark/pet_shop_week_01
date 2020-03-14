@@ -40,3 +40,9 @@ def find_pet_by_name(pet_shop, name)
   end
   return nil
 end
+
+def remove_pet_by_name(pet_shop, name)
+  # pet_shop[:pets].keep_if {:name == name}
+  pet_shop[:pets].delete_if { |name| name != :name}
+end
+# Isn't this backwards??? I dont know why this "works" or passes the test.
